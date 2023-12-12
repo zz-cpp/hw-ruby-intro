@@ -2,16 +2,24 @@
 
 # Part 1
 
-def sum arr
-  # YOUR CODE HERE
+def sum(arr)
+  sum = 0
+  arr.each { |item| sum += item }
+  sum
 end
 
-def max_2_sum arr
-  # YOUR CODE HERE
+def max_2_sum(arr) 
+   max_array = arr.max(2) 
+   max_array.sum 
 end
-
-def sum_to_n? arr, n
-  # YOUR CODE HERE
+  
+def sum_to_n?(arr, n)
+  (0...arr.size).each do |i|
+    (i+1...arr.size).each do |j|
+      return true if arr[i] + arr[j] == n 
+    end
+  end
+  false
 end
 
 # Part 2
