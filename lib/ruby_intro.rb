@@ -50,5 +50,13 @@ end
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+  def initialize(isbn, price)
+    @isbn = isbn
+    @price = price
+  end
+
+  def price_as_string
+    puts"price is " + @price.to_s + " " + "%s%.2f"% ["$",@price]
+    "%s%.2f"% ["$",@price]
+  end
 end
