@@ -25,15 +25,26 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  "Hello, " + name
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  s[/^[^AEIOUaeiou#].*/]== nil ? false : true
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  if s[/^[10]+/] != nil
+    # puts "s is: " + s + " the decimal is: " + s.to_i(2).to_s
+    if s.to_i(2) % 4 == 0
+      puts "s is: " + s + " res is true"
+      return true
+    else
+      puts "s is: " + s + " res is false"
+      return false
+    end
+  end
+  puts "s is: " + s + " res is false with invalid"
+  false
 end
 
 # Part 3
